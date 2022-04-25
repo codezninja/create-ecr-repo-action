@@ -19,6 +19,9 @@ inputs:
     required: false
     default: '10'
     # Defaults to keep latest 10 images tagged sha-
+  TAGS:
+    description: 'A string of tags to add to ecr repo. Seperated by semicolon. Example (key1,value1;key2,value2;key3,value3)'
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'

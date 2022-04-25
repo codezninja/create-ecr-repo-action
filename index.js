@@ -7,6 +7,14 @@ async function run () {
     const daysBeforeExpiringUntaggedImages = getInput('NUM_DAYS_BEFORE_EXPIRING_UNTAGGED_IMAGES', { required: true })
     const tagPrefix = getInput('TAG_PREFIX')
     const numImages = getInput('NUM_TAGGED_IMAGES_TO_RETAIN')
+    const tags = getInput('TAGS').split(';')
+
+    var tagArray = [];
+    for(const tag of tags) {
+        var [key, value] = tag.split(',')
+        tagArray.push({'Key': key, 'Value': value})
+    }
+
     if (tagPrefix && !numImages) {
       setFailed('If TAG_PREFIX is provided, NUM_TAGGED_IMAGES_TO_RETAIN is required')
       return
@@ -30,7 +38,7 @@ async function run () {
     }
 
     console.log('Repository does not exist. Creating...')
-    await ecr.createRepository({ repositoryName, imageScanningConfiguration: { scanOnPush: true } }).promise()
+    await ecr.createRepository({ repositoryName, imageScanningConfiguration: { scanOnPush: true },  tags: tagArray }).promise()
 
     const lifecyclePolicy = {
       rules: [
