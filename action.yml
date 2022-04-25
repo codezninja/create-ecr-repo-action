@@ -21,4 +21,4 @@ inputs:
     # Defaults to keep latest 10 images tagged sha-
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'dist/index.js'

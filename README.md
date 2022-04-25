@@ -61,3 +61,12 @@ jobs:
 
 </p>
 </details>
+
+## Create a release (Manually for now)
+
+```
+npm install
+npm run package
+```
+
+Commit all files including new `dist` dir
