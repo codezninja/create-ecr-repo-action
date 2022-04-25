@@ -1,0 +1,29 @@
+{
+  "name": "create-ecr-repo-action",
+  "version": "1.0.0",
+  "description": "Create ECR Repo",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx standard index.js",
+    "package": "npx ncc build index.js -m -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codezninja/create-ecr-repo-action.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript"
+  ],
+  "author": "Ezbon Jacob <ezjacob@gmail.com",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "aws-sdk": "^2.955.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.1",
+    "standard": "^14.3.4"
+  }
+}
