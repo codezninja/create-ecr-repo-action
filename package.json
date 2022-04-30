@@ -23,7 +23,7 @@
     "aws-sdk": "^2.955.0"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.22.1",
-    "standard": "^14.3.4"
+    "@zeit/ncc": "0.22.3",
+    "standard": "14.3.4"
   }
 }
