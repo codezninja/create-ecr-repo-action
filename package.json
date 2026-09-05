@@ -19,7 +19,7 @@
   "author": "Ezbon Jacob <ezjacob@gmail.com",
   "license": "Apache-2.0",
   "dependencies": {
-    "@actions/core": "^1.4.0",
+    "@actions/core": "^3.0.0",
     "aws-sdk": "^2.955.0"
   },
   "devDependencies": {
